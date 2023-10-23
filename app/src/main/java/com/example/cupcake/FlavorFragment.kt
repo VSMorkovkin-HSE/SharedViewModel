@@ -16,6 +16,7 @@
 package com.example.cupcake
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -53,6 +54,7 @@ class FlavorFragment : Fragment() {
         binding?.apply {
             nextButton.setOnClickListener { goToNextScreen() }
             viewModel = sharedViewModel
+            lifecycleOwner = viewLifecycleOwner
         }
 
     }
