@@ -63,11 +63,11 @@ class StartFragment : Fragment() {
      */
     fun orderCupcake(quantity: Int) {
         //Toast.makeText(activity, "Ordered $quantity cupcake(s)", Toast.LENGTH_SHORT).show()
-        sharedViewModel.setQuantity(quantity)
+        sharedViewModel.setQuantity(quantity) // set quantity in viewModel
         if (sharedViewModel.hasNoFlavorSet()) {
-            sharedViewModel.setFlavor(getString(R.string.vanilla))
+            sharedViewModel.setFlavor(getString(R.string.vanilla)) // if flavor hasn't been set then set vanilla
         }
-        findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
+        findNavController().navigate(R.id.action_startFragment_to_flavorFragment) // move to flavor fragment
     }
 
     /**
